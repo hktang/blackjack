@@ -28,9 +28,9 @@ function Card(s, n){
 
 //Make Deck
 var makeDeck = function (){
-	var cards = Array(4);
+	var cards = Array();
 	for (var i = 0; i < 4; i++) {
-		cards[i] = new Array(3);
+		cards[i] = Array();
 		for (var j = 0; j < 13; j++) {
 			cards[i][j] = new Card(i,j);
 		}
@@ -157,3 +157,5 @@ var playGame = function (){
 	console.log("-------- You (" +userHand.score()+ ") -----------\n" + userHand.printHand()) ;
 	console.log(declareWinner(userHand, dealerHand));
 };
+
+playGame();
